@@ -1,0 +1,12 @@
+TARGET = employ
+
+all: $(TARGET)
+
+$(TARGET):
+	g++ main.cpp workManager.cpp worker.cpp file.cpp -std=c++11 -o $(TARGET) -I ./include
+
+clean:
+	rm $(TARGET)
+
+run:
+	./$(TARGET)
